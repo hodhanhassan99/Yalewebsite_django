@@ -1,0 +1,1329 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Yale University</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/welcyale.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/welcyale.jpg' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="{% static 'assets/img/welcyale.jpg' %}" alt="">
+{# <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">#}
+{#  <g id="bgCarrier" stroke-width="0"></g>#}
+{#  <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>#}
+{#  <g id="iconCarrier">#}
+{#    <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#    <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#    <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#    <path d="M4 22V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#    <path d="M20 9.5V13.5M20 22V17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#    <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>#}
+{#    <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z" stroke="currentColor" stroke-width="1.5"></path>#}
+{#  </g>#}
+{#</svg>#}
+
+        <h1 class="sitename">Yale University</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'my_home' %}" class="active">Home</a></li>
+          <li><a href="{% url 'my_about' %}">About</a></li>
+          <li><a href="{% url 'my_properties' %}">Properties</a></li>
+          <li><a href="{% url 'my_services' %}">Services</a></li>
+          <li><a href="{% url 'my_contact' %}">contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="property-details.html">Property Details</a></li>
+              <li><a href="service-details.html">Service Details</a></li>
+              <li><a href="agent-profile.html">Agent Profile</a></li>
+              <li><a href="blog-details.html">Blog Details</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Life At Yale</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Arts and Culture</a></li>
+              <li class="dropdown"><a href="#"><span>Athletics and Recreation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Health and wellness</a></li>
+              <li><a href="#">New Haven</a></li>
+              <li><a href="#">Residential Life</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="hero-wrapper">
+          <div class="row g-4">
+
+            <div class="col-lg-7">
+              <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+                <div class="content-header">
+{#                  <span class="hero-label">#}
+{#                    <i class="bi bi-house-heart"></i>#}
+{#                    Dreams Come True#}
+{#                  </span>#}
+                  <h1>Welcome To Yale University</h1>
+                  <p>We are thrilled to have you join our vibrant and diverse community of scholars, leaders, and innovators. At Yale, you’ll find a place where curiosity is celebrated, ideas are challenged, and lifelong friendships are formed. Whether you're walking through our historic campus or diving into groundbreaking research, you are now part of a tradition of excellence and a future full of possibility. We can't wait to see the unique contributions you’ll bring to the Yale family.</p>
+                </div>
+
+                <div class="search-container" data-aos="fade-up" data-aos-delay="300">
+                  <div class="search-header">
+                    <h3>Start Your Educational Journey With Us</h3>
+                    <p>Discover countless opportunities to grow and achieve success</p>
+                  </div>
+
+                  <form action="" class="property-search-form">
+                    <div class="search-grid">
+                      <div class="search-field">
+                        <label for="search-location" class="field-label">Location</label>
+                        <input type="text" id="search-location" name="location" placeholder="Enter Campus Location" required="">
+                        <i class="bi bi-geo-alt field-icon"></i>
+                      </div>
+
+                      <div class="search-field">
+                        <label for="search-type" class="field-label">Courses we offer</label>
+                        <select id="search-type" name="property_type" required="">
+                          <option value="">Our schools in campus</option>
+                          <option value="house">Yale School of Law</option>
+                          <option value="apartment">Yale Engineering School</option>
+                          <option value="villa">Yale School of Medicine</option>
+                          <option value="commercial">Yale School of Business</option>
+                        </select>
+                        <i class="bi bi-building field-icon"></i>
+                      </div>
+
+                      <div class="search-field">
+                        <label for="search-budget" class="field-label">Dorm budget range</label>
+                        <select id="search-budget" name="price_range" required="">
+                          <option value="">Any Price</option>
+                          <option value="0-300000">Under $3000</option>
+                          <option value="300000-600000">$3000 - $6000</option>
+                          <option value="600000-900000">$6000 - $9000</option>
+                          <option value="900000-1500000">$9000 - $10500</option>
+                          <option value="1500000+">Above $10500</option>
+                        </select>
+                        <i class="bi bi-currency-dollar field-icon"></i>
+                      </div>
+
+                      <div class="search-field">
+                        <label for="search-rooms" class="field-label">Bedrooms</label>
+                        <select id="search-rooms" name="bedrooms">
+                          <option value="">Any</option>
+                          <option value="1">1 Room</option>
+                          <option value="2">2 Rooms</option>
+                          <option value="3">3 Rooms</option>
+                          <option value="4">4 Rooms</option>
+                          <option value="5+">5+ Rooms</option>
+                        </select>
+                        <i class="bi bi-door-open field-icon"></i>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                      <i class="bi bi-search"></i>
+                      <span>search for admissions</span>
+                    </button>
+                  </form>
+                </div>
+
+                <div class="achievement-grid" data-aos="fade-up" data-aos-delay="400">
+                  <div class="achievement-item">
+                    <div class="achievement-number">
+                      <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1" class="purecounter"></span>+
+                    </div>
+                    <span class="achievement-text">Law Students</span>
+                  </div>
+                  <div class="achievement-item">
+                    <div class="achievement-number">
+                      <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>+
+                    </div>
+                    <span class="achievement-text">Expert faculty</span>
+                  </div>
+                  <div class="achievement-item">
+                    <div class="achievement-number">
+                      <span data-purecounter-start="0" data-purecounter-end="96" data-purecounter-duration="1" class="purecounter"></span>%
+                    </div>
+                    <span class="achievement-text">Success Rate</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Hero Content -->
+
+            <div class="col-lg-5">
+              <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="visual-container">
+                  <div class="featured-property">
+                    <img src="{% static 'assets/img/welcometoyale.jpg' %}" alt="Featured Property" class="img-fluid">
+                    <div class="property-info">
+                      <div class="property-price">Visit Our campus</div>
+                      <div class="property-details">
+                        <span><i class="bi bi-geo-alt"></i>New Haven, Connecticut</span>
+                        <span><i class="bi bi-house"></i>State of the art facilities</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="overlay-images">
+                    <div class="overlay-img overlay-1">
+                      <img src="{% static 'assets/img/yale logo.jpg' %}" alt="Interior View" class="img-fluid">
+                    </div>
+                    <div class="overlay-img overlay-2">
+                      <img src="{% static 'assets/img/yalecampus.jpg' %}" alt="Exterior View" class="img-fluid">
+                    </div>
+                  </div>
+
+                  <div class="agent-card">
+                    <div class="agent-profile">
+                      <img src="{% static 'assets/img/real-estate/agent-7.webp' %}" alt="Agent Profile" class="agent-photo">
+                      <div class="agent-info">
+                        <h4>Michael Chen</h4>
+                        <p>Professor of the Yale School of Law</p>
+                        <div class="agent-rating">
+                          <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                          </div>
+                          <span class="rating-text">5.0 (94 reviews)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="contact-agent-btn">
+                      <i class="bi bi-chat-dots"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Hero Visual -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Home About Section -->
+    <section id="home-about" class="home-about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="image-gallery">
+              <div class="primary-image">
+                <img src="{% static 'assets/img/yalecampus2.jpg' %}" alt="Modern Property" class="img-fluid">
+                <div class="experience-badge">
+                  <div class="badge-content">
+                    <div class="number"><span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="1" class="purecounter"></span>+</div>
+                    <div class="text">Years<br>Experience</div>
+                  </div>
+                </div>
+              </div>
+              <div class="secondary-image">
+                <img src="{% static 'assets/img/welcometoyale.jpg' %}" alt="Luxury Interior" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="content">
+              <div class="section-header">
+                <span class="section-label">About Our Campus</span>
+                <h2>Building Dreams, Guiding future leaders</h2>
+              </div>
+
+                <p>The university calendar features hundreds of exhibits and performances throughout the academic year, as well as events celebrating the diverse cultures on campus.</p>
+              <div class="achievements-list">
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <i class="bi bi-house-door"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <h4><span data-purecounter-start="0" data-purecounter-end="6000" data-purecounter-duration="2" class="purecounter"></span>+ Students</h4>
+                    <p>Successfully completed majors</p>
+                  </div>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <h4><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>% Student Satisfaction</h4>
+                    <p>Professors recommend us</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="action-section">
+                <a href="about.html" class="btn-cta">
+                  <span>Discover Our Story</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                <div class="contact-info">
+                  <div class="contact-icon">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span>Call us today</span>
+                    <strong>+1 (555) 123-4567</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Home About Section -->
+
+    <!-- Featured Properties Section -->
+    <section id="featured-properties" class="featured-properties section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Campus Facilities</h2>
+        <p>Yale’s campus features top-tier facilities, including world-class libraries, modern labs, vibrant arts spaces, and excellent athletic centers. From cozy dorms to inspiring study areas, every corner is designed to support student life and learning.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-8">
+
+            <div class="featured-property-main" data-aos="zoom-in" data-aos-delay="200">
+              <div class="property-hero">
+                <img src="{% static 'assets/img/yalehorizon.jpg' %}" alt="Luxury Estate" class="img-fluid">
+                <div class="property-overlay">
+                  <div class="property-badge-main premium">Premium</div>
+                  <div class="property-stats">
+                    <div class="stat-item">
+                      <i class="bi bi-house-door"></i>
+                      <span>6 schools</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="bi bi-droplet-fill"></i>
+                      <span>5 Libraries</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="bi bi-arrows-move"></i>
+                      <span>25 acres</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="property-hero-content">
+                <div class="property-header">
+                  <div class="property-info">
+                    <h2><a href="property-details.html">Magnificent Estate with Garden Views</a></h2>
+                    <div class="property-address">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <span>New Haven, Connecticut</span>
+                    </div>
+                  </div>
+                  <div class="property-price-main">4800 students</div>
+                </div>
+                <p class="property-description">Luxurious facilities nestled in exclusive New Haven yards featuring panoramic hillside views, infinity pool, modern libraries, and private tennis courts. Architectural masterpiece with premium finishes throughout.</p>
+                <div class="property-actions-main">
+                  <a href="property-details.html" class="btn-primary-custom">Schedule Tour</a>
+                  <a href="property-details.html" class="btn-outline-custom">View online tour</a>
+                  <div class="property-listing-info">
+                    <span class="listing-status for-sale">Open day viewing</span>
+                    <span class="listing-date">join today</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="properties-sidebar">
+
+              <div class="sidebar-property-card" data-aos="fade-left" data-aos-delay="300">
+                <div class="sidebar-property-image">
+                  <img src="{% static 'assets/img/yalelibrary.jpg' %}" alt="Modern Condo" class="img-fluid">
+                  <div class="sidebar-property-badge hot">Join us</div>
+                </div>
+                <div class="sidebar-property-content">
+                  <h4><a href="property-details.html">Moderate study space</a></h4>
+                  <div class="sidebar-location">
+                    <i class="bi bi-pin-map"></i>
+                    <span>Seattle, WA 98101</span>
+                  </div>
+                  <div class="sidebar-specs">
+                    <span><i class="bi bi-house"></i> 30 plus library assistants</span>
+                    <span><i class="bi bi-droplet"></i>more than 4000 books</span>
+                    <span><i class="bi bi-rulers"></i> 6,100 sq ft</span>
+                  </div>
+                  <div class="sidebar-price-row">
+                    <div class="sidebar-price">state of the art Libraries</div>
+                    <a href="property-details.html" class="sidebar-btn">View</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-property-card" data-aos="fade-left" data-aos-delay="400">
+                <div class="sidebar-property-image">
+                  <img src="{% static 'assets/img/Yaledorms.jpg' %}" alt="Family Home" class="img-fluid">
+                  <div class="sidebar-property-badge new">New Listing</div>
+                </div>
+                <div class="sidebar-property-content">
+                  <h4><a href="property-details.html">Elegant Student Residence</a></h4>
+                  <div class="sidebar-location">
+                    <i class="bi bi-pin-map"></i>
+                    <span>3 km from campus</span>
+                  </div>
+                  <div class="sidebar-specs">
+                    <span><i class="bi bi-house"></i> 4 Bedrooms in each room</span>
+                    <span><i class="bi bi-droplet"></i>modern facilities in the dorms</span>
+                    <span><i class="bi bi-rulers"></i> 9,800 sq ft</span>
+                  </div>
+                  <div class="sidebar-price-row">
+                    <div class="sidebar-price">prices listed above</div>
+                    <a href="property-details.html" class="sidebar-btn">View</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row gy-4 mt-4">
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="property-card-horizontal">
+              <div class="property-image-horizontal">
+                <img src="{% static 'assets/img/yalelecture.jpg' %}" alt="Penthouse" class="img-fluid">
+                <div class="property-badge-horizontal exclusive">Exclusive</div>
+              </div>
+              <div class="property-content-horizontal">
+                <h3><a href="property-details.html">Luxury Lecture Halls</a></h3>
+                <div class="property-location-horizontal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>2 minutes from dorms</span>
+                </div>
+                <div class="property-features">
+                  <span class="feature"><i class="bi bi-house"></i>modern tech available</span>
+                  <span class="feature"><i class="bi bi-droplet"></i>computers on standby</span>
+                  <span class="feature"><i class="bi bi-rulers"></i> 6,850 sq ft</span>
+                </div>
+                <p>Spectacular lecture halls with floor-to-ceiling windows and private rooftop terrace overlooking the city skyline.</p>
+                <div class="property-footer-horizontal">
+                  <div class="property-price-horizontal">books available</div>
+                  <a href="property-details.html" class="btn-view-horizontal">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="property-card-horizontal">
+              <div class="property-image-horizontal">
+                <img src="{% static 'assets/img/yalearena.jpg' %}" alt="Modern Home" class="img-fluid">
+                <div class="property-badge-horizontal new">New</div>
+              </div>
+              <div class="property-content-horizontal">
+                <h3><a href="property-details.html">Modern Architectural arena</a></h3>
+                <div class="property-location-horizontal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Football field</span>
+                </div>
+                <div class="property-features">
+                  <span class="feature"><i class="bi bi-house"></i> 4 Gyms </span>
+                  <span class="feature"><i class="bi bi-droplet"></i> 30 locker rooms</span>
+                  <span class="feature"><i class="bi bi-rulers"></i> 8,450 sq ft</span>
+                </div>
+                <p>Award-winning contemporary design with freshly managed grass, smart sprinkler technology, and resort-style fields.</p>
+                <div class="property-footer-horizontal">
+                  <div class="property-price-horizontal">Huge sitting areas</div>
+                  <a href="property-details.html" class="btn-view-horizontal">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Properties Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Yale's Research Over The Years</h2>
+        <p>Yale's researchers discuss the responsibility of publicly funded scientists to benefit society and the decades of work required to turn laboratory discoveries into life-saving treatments.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-search"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">How federal research funding changed America</a></h3>
+                <p>For 75 years, the federal government has partnered with Yale's academic institution, fueling discoveries that have transformed medicine, saved lives, and positioned the United States as a global science leader.</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i>Hospital Development</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Medicinal Research</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Thorough work experience</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Explore Now</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{% static 'assets/img/yaleresearch1.webp' %}" class="img-fluid" alt="Property Search" loading="lazy">
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-calculator"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">Dental Care in Remote Areas</a></h3>
+                <p>Yale's Rural dental residency program in New Hampshire created a pipeline of young dentists to serve in remote areas</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i>Free consultations</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Free Procedures</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Affordable oral care</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Get Valuation</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{% static 'assets/img/yaledentist.jpg' %}" class="img-fluid" alt="Property Valuation" loading="lazy">
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-key"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">Outside Campus Property Rental</a></h3>
+                <p>Yale students, faculty, and staff seeking housing options beyond the university-owned residences can explore nearby rental opportunities through our approved resources.</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i> Apartment Rentals</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Penthouse rentals</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Single house rentals</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Start Renting</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{% static 'assets/img/yalepic.jpg' %}" class="img-fluid" alt="Property Rental" loading="lazy">
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="500">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">School Alumni board</a></h3>
+                <p>The Yale School Alumni Board is a volunteer body of dedicated alumni who work to strengthen the bond between Yale and its graduates. The board advises the school on alumni engagement, career support, and lifelong learning opportunities.</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i>Hon. James Hartford</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Prof. Elle Woods</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Prof. Alex Zephyr III</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{% static 'assets/img/welcometoyale.jpg' %}" class="img-fluid" alt="Investment Advisory" loading="lazy">
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+        <div class="text-center" data-aos="zoom-in" data-aos-delay="600">
+          <a href="services.html" class="btn-view-all">
+            <span>View All Services</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- Featured Agents Section -->
+    <section id="featured-agents" class="featured-agents section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Top 4 Law Professors</h2>
+        <p>Yale Law School is home to some of the most distinguished legal minds in the world. Its faculty includes accomplished lawyers, scholars, and public servants who bring a wealth of experience from the courtroom, government, and academia. These professors not only teach but also shape national and international legal thought through their research, writing, and advocacy.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{% static 'assets/img/yalelaw1.jpg' %}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678901" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:jennifer.adams@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge">Star Lawyer</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Jensen Ackles</h4>
+                  <span class="position">Senior Law Professor</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Beverly Hills</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Over 56</span>
+                    <span class="tag">successful cases</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{% static 'assets/img/yalelaw2.jpg' %}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678902" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:marcus.hayes@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge expert">Expert</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Marcus Hayes</h4>
+                  <span class="position">Corporate Law Professor</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Manhattan</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Highest Ranked Lawyer</span>
+                    <span class="tag">in corporate law firms</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{% static 'assets/img/yalelaw3.jpg' %}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678903" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:sophia.rivera@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge rising">Rising Star</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Sophia Rivera</h4>
+                  <span class="position">Criminal Law Professor</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>San Francisco</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">2 degrees achiever</span>
+                    <span class="tag">Multi skilled</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{% static 'assets/img/yalelaw4.jpg' %}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678904" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:daniel.morrison@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge veteran">Veteran</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Daniel Morrison</h4>
+                  <span class="position">Civil Rights Law professor</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Austin</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Multi-skilled</span>
+                    <span class="tag">PhD achiever</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+          <a href="agents.html" class="discover-all-agents">
+            <span>Discover All Agents</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Agents Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>At Yale, learning goes beyond the classroom. Students and alumni often speak of the university’s inspiring faculty, close-knit community, and transformative experiences that shape their personal and professional journeys.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="testimonial-grid">
+
+          <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{% static 'assets/img/person/person-f-5.webp' %}" class="img-fluid" alt="Testimonial 1">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>Sophia Martinez</h3>
+                  <h4>Creative Director</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-building"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Leveraging cutting-edge design principles to create immersive brand experiences that resonate with modern audiences.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item featured" data-aos="zoom-in" data-aos-delay="200">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{% static 'assets/img/person/person-m-5.webp' %}" class="img-fluid" alt="Testimonial 2">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>Alexander Wright</h3>
+                  <h4>CEO &amp; Founder</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-buildings"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Revolutionary solutions have transformed our business landscape, driving unprecedented growth and market leadership position.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{% static 'assets/img/person/person-f-6.webp' %}" class="img-fluid" alt="Testimonial 3">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>Isabella Kim</h3>
+                  <h4>Product Strategist</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-building-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Strategic implementation of innovative technologies has elevated our product development and market penetration.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{% static 'assets/img/person/person-m-6.webp' %}" class="img-fluid" alt="Testimonial 4">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>James Cooper</h3>
+                  <h4>Tech Lead</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-building-gear"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Exceptional technical expertise and innovative solutions have streamlined our development processes significantly.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Why you should join Yale</h2>
+        <p>Yale University is one of the world’s most prestigious and historic institutions, known for its rigorous academics, influential alumni network, and deeply rooted traditions. It offers students not just a top-tier education, but also access to leading research opportunities, a vibrant campus culture, and a global reputation that opens doors in nearly every field. Whether you're interested in law, medicine, the arts, public policy, or the sciences, Yale provides an environment that encourages intellectual exploration, leadership, and innovation, all while fostering a strong sense of community and purpose.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h3>Why Yale?</h3>
+              <p>With over three decades of experience in the education field worldwide, we've built our reputation on trust, expertise, and exceptional results. Our dedicated faculty of education experts understands the nuances of every student and various learning methods.</p>
+
+              <div class="features-list">
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div>
+                    <h5>Local Market Expertise</h5>
+                    <p>Deep knowledge of neighborhoods, pricing trends, and market conditions in your area.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div>
+                    <h5>Thorough Teaching Methods</h5>
+                    <p>Every student is thoroughly tested and tutored before monthly and weekly evaluations to ensure a higher success rate and competitiveness among students to achieve credits.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-headset"></i>
+                  </div>
+                  <div>
+                    <h5>24/7 student Support</h5>
+                    <p>Our dedicated support team is available around the clock to assist students with all their needs.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+                  <div>
+                    <h5>Proven Track Record</h5>
+                    <p>Consistently delivering results with over 2,500 successful graduates and 98% student satisfaction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-buttons mt-4">
+                <a href="#" class="btn btn-primary me-3">Learn More About Us</a>
+                <a href="#" class="btn btn-outline-primary">Contact Our Team</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="stats-section">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-house-door"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="2500" data-purecounter-duration="2" class="purecounter"></span>+
+                    </div>
+                    <div class="stat-label">Graduates</div>
+                    <p>Successful graduates across the world and locally in connecticut.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2" class="purecounter"></span>%
+                    </div>
+                    <div class="stat-label">Student Satisfaction</div>
+                    <p>Exceptional teaching quality rated by our satisfied students and parents.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-clock-history"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2" class="purecounter"></span>+
+                    </div>
+                    <div class="stat-label">Years Experience</div>
+                    <p>Two decades of exceling in the education field and challenging students to achieve their full potential.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-award"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="2" class="purecounter"></span>+
+                    </div>
+                    <div class="stat-label">Industry Awards</div>
+                    <p>Recognition for excellence in law and student satisfaction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-preview mt-5">
+                <div class="testimonial-card">
+                  <div class="quote-icon mb-2">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                  <p>"Choosing Yale Law was the best decision I ever made. The small class sizes allowed for deep engagement with professors — many of whom are national leaders in constitutional law, human rights, and legal theory. What stood out most was the freedom to shape my own academic journey, from clinics to independent research. I was surrounded by peers who were both brilliant and collaborative, not competitive. Yale doesn’t just prepare you to practice law; it prepares you to rethink it. After graduation, I felt confident stepping into the public interest world, knowing I had a strong foundation and lifelong support from the Yale network."</p>
+                  <div class="testimonial-author d-flex align-items-center mt-3">
+                    <img src="{% static 'assets/img/person/person-f-3.webp' %}" alt="Client" class="author-image me-3">
+                    <div>
+                      <h6>Sarah Martinez</h6>
+                      <span>First-time law grad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Call To Action Section -->
+    <section class="call-to-action-1 call-to-action section" id="call-to-action">
+      <div class="cta-bg" style="background-image: url('{% static 'assets/img/yalebackground.jpg' %}');"></div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-8">
+
+            <div class="cta-content text-center">
+                  <h2>Need Help Finding Your Dream Major?</h2>
+              <p>At Yale, we believe that education is a journey of discovery. If you're still deciding on a major, you're not alone — and you're in the right place. Our liberal arts curriculum encourages intellectual exploration across disciplines, giving you the freedom to pursue your interests before declaring a major at the end of your sophomore year. Along the way, you’ll have the support of faculty advisors, peer mentors, and a wealth of campus resources dedicated to academic and personal growth. Whether you arrive with a clear vision or an open mind, Yale is designed to help you uncover your passions and chart a path that is uniquely yours.</p>
+
+              <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Contact Us Today</a>
+                <a href="#" class="btn btn-outline">Schedule a Call</a>
+              </div>
+
+              <div class="cta-features">
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-telephone-fill"></i>
+                  <span>Free Campus Tour</span>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="250">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>24/7 Support</span>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-shield-check-fill"></i>
+                  <span>Trusted Experts</span>
+                </div>
+              </div>
+
+            </div><!-- End CTA Content -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Call To Action Section -->
+
+    <!-- Recent Blog Posts Section -->
+    <section id="recent-blog-posts" class="recent-blog-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Blog Posts</h2>
+        <p>Straight from current Yale students sharing daily life around campus</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <article class="featured-post">
+              <div class="featured-img">
+                <img src="{% static 'assets/img/blog/yaleblog1.jpg' %}" alt="" class="img-fluid" loading="lazy">
+                <div class="featured-badge">Featured</div>
+              </div>
+
+              <div class="featured-content">
+                <div class="post-header">
+                  <a href="#" class="category">SPORTS</a>
+                  <span class="post-date">JULY 18, 2025</span>
+                </div>
+
+                <h2 class="post-title">
+                  <a href="#">Men’s Basketball</a>
+                </h2>
+
+                <p class="post-excerpt">
+                  Seniors from the Class of 2025 leave Yale as the winningest class in program history under long-time coach James Jones. The Bulldogs recently delivered a strong come-from-behind win over Harvard, extending an early-season Ivy League win streak to six games.
+                </p>
+
+                <div class="post-footer">
+                  <div class="author-info">
+                    <img src="{% static 'assets/img/person/person-m-8.webp' %}" alt="" class="author-avatar">
+                    <div class="author-details">
+                      <span class="author-name">Marcus Johnson</span>
+                      <span class="read-time">5 min read</span>
+                    </div>
+                  </div>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-post" data-aos="fade-up" data-aos-delay="400">
+              <div class="featured-img">
+                <img src="{% static 'assets/img/blog/yaleblog2.jpg' %}" alt="" class="img-fluid" loading="lazy">
+                <div class="featured-badge">Featured</div>
+              </div>
+
+              <div class="featured-content">
+                <div class="post-header">
+                  <a href="#" class="category">Inter-school Competition</a>
+                  <span class="post-date">JULY 16, 2024</span>
+                </div>
+
+                <h2 class="post-title">
+                  <a href="#">A coveted British Parliamentary (BP) style high school tournament also run by the YDA. It attracts elite teams preparing for international BP events. </a>
+                </h2>
+
+                <p class="post-excerpt">
+                  The Yale–Harvard football rivalry, known simply as The Game, is one of the oldest and most celebrated rivalries in American college football. First played in 1875, it has become much more than a sporting event—it's a historic tradition filled with pageantry, pride, and spirited competition. Held annually in late November, The Game alternates between Yale’s iconic Yale Bowl and Harvard Stadium, drawing thousands of students, alumni, and fans from around the country. For many, it’s the highlight of the fall semester, uniting the campus in a display of school spirit unlike any other. Whether you're cheering from the stands, tailgating with classmates, or watching from afar, The Game represents a legacy of rivalry, respect, and shared tradition that has endured for nearly 150 years.
+                </p>
+
+                <div class="post-footer">
+                  <div class="author-info">
+                    <img src="{% static 'assets/img/person/person-f-7.webp' %}" alt="" class="author-avatar">
+                    <div class="author-details">
+                      <span class="author-name">Emma Rodriguez</span>
+                      <span class="read-time">7 min read</span>
+                    </div>
+                  </div>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </article>
+          </div><!-- End featured post -->
+
+          <div class="col-lg-4">
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="200">
+              <div class="recent-img">
+                <img src="{% static 'assets/img/blog/yaleblog3.jpg' %}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Ice Hockey</a>
+                <h3 class="recent-title">
+                  <a href="#">Yale put on a strong showing at the Connecticut Ice Tournament, showcasing promising development as the season heads into ECAC play.</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By Jessica Kim</span>
+                  <span class="date">Dec 15, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="250">
+              <div class="recent-img">
+                <img src="{% static 'assets/img/blog/yaleblog4.jpg' %}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Sororities</a>
+                <h3 class="recent-title">
+                  <a href="#">Yale’s traditional all-female sororities include Alpha Phi, Kappa Alpha Theta, Kappa Kappa Gamma, and Pi Beta Phi—though Pi Phi ceased formal affiliation in late 2023 and rebranded as the independent group Aeris</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By David Park</span>
+                  <span class="date">Dec 12, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="300">
+              <div class="recent-img">
+                <img src="{% static 'assets/img/blog/yaleblog5.jpg' %}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">End of year Prom</a>
+                <h3 class="recent-title">
+                  <a href="#">Yale comprises 14 residential colleges, each hosting its own formal event—some even host multiple formals per year. This means students enjoy up to 14 themed dances annually, all organized by students for a lively, community-driven vibe</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By Sarah Miller</span>
+                  <span class="date">Dec 10, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="350">
+              <div class="recent-img">
+                <img src="{% static 'assets/img/blog/yaleblog6.jpg' %}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Tech</a>
+                <h3 class="recent-title">
+                  <a href="#">Opened in May 2024 on West Campus, Yale’s Tech Tank is a 20,000‑gallon facility enabling controlled testing of amphibious robots, marine observation devices, and similar advanced technologies — complete with wave generators, moveable ramps, and climate control. It supports research across Yale and beyond at the intersection of robotics and engineering</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By Alex Chen</span>
+                  <span class="date">Dec 8, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Recent Blog Posts Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Yale University</span>
+          </a>
+          <p>Discover a vibrant community where tradition meets innovation. Yale offers world-class academics, inspiring faculty, and historic yet modern campus facilities—all designed to support your growth and curiosity</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+{#        <div class="col-lg-2 col-6 footer-links">#}
+{#          <h4>Our Services</h4>#}
+{#          <ul>#}
+{#            <li><a href="#">Web Design</a></li>#}
+{#            <li><a href="#">Web Development</a></li>#}
+{#            <li><a href="#">Product Management</a></li>#}
+{#            <li><a href="#">Marketing</a></li>#}
+{#            <li><a href="#">Graphic Design</a></li>#}
+{#          </ul>#}
+{#        </div>#}
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>New Haven</p>
+          <p>New Haven, Connecticut</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>yaleuniversity@outlook.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Yale University</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+        Designed by <a href="https://github.com/hodhanhassan99">Hodhan Hassan</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
