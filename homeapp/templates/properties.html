@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Properties - HomeSpace Bootstrap Template</title>
+  <title>Dorm Options - Yale University</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/welcyale.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/welcyale.jpg' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -18,21 +19,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: HomeSpace
-  * Template URL: https://bootstrapmade.com/homespace-bootstrap-real-estate-template/
-  * Updated: Jul 05 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="properties-page">
@@ -42,29 +36,29 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g id="bgCarrier" stroke-width="0"></g>
-          <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="iconCarrier">
-            <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M4 22V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M20 9.5V13.5M20 22V17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z" stroke="currentColor" stroke-width="1.5"></path>
-          </g>
-        </svg>
-        <h1 class="sitename">HomeSpace</h1>
+         <img src="{% static 'assets/img/welcyale.jpg' %}" alt="">
+{#        <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">#}
+{#          <g id="bgCarrier" stroke-width="0"></g>#}
+{#          <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>#}
+{#          <g id="iconCarrier">#}
+{#            <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#            <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#            <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#            <path d="M4 22V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#            <path d="M20 9.5V13.5M20 22V17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>#}
+{#            <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>#}
+{#            <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z" stroke="currentColor" stroke-width="1.5"></path>#}
+{#          </g>#}
+{#        </svg>#}
+        <h1 class="sitename">Yale University</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="properties.html" class="active">Properties</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="{% url 'my_home' %}">Home</a></li>
+          <li><a href="{% url 'my_about' %}">About</a></li>
+          <li><a href="{% url 'my_properties' %}" class="active">Dorms</a></li>
+          <li><a href="{% url 'my_services' %}">Services</a></li>
           <li><a href="agents.html">Agents</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -79,7 +73,7 @@
             </ul>
           </li>
 
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Life At Yale</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -109,7 +103,7 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Properties</h1>
+        <h1 class="mb-2 mb-lg-0">Our In-Campus Dorms</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -151,9 +145,9 @@
                       <label>Price</label>
                       <select class="form-select">
                         <option>Any Price</option>
-                        <option>$0 - $500k</option>
-                        <option>$500k - $1M</option>
-                        <option>$1M+</option>
+                        <option>$3000 - $5000</option>
+                        <option>$5000 - $10000</option>
+                        <option>$10000+</option>
                       </select>
                     </div>
                   </div>
@@ -225,10 +219,10 @@
                 <div class="property-item">
                   <a href="property-details.html" class="property-link">
                     <div class="property-image-wrapper">
-                      <img src="assets/img/real-estate/property-exterior-2.webp" alt="Luxury Villa" class="img-fluid">
+                      <img src="{% static 'assets/img/real-estate/property-exterior-2.webp' %}" alt="Luxury Villa" class="img-fluid">
                       <div class="property-status">
                         <span class="status-badge featured">Featured</span>
-                        <span class="status-badge sale">For Sale</span>
+                        <span class="status-badge sale">For Rent</span>
                       </div>
                       <div class="property-actions">
                         <button class="action-btn favorite-btn" data-toggle="tooltip" title="Add to Favorites">
@@ -246,13 +240,13 @@
                   </a>
                   <div class="property-details"><a href="property-details.html" class="property-link">
                       <div class="property-header">
-                        <div class="property-price">$1,850,000</div>
+                        <div class="property-price">$10,850 per month</div>
                         <div class="property-type">House</div>
                       </div>
                       <h4 class="property-title">Luxury Modern Villa with Pool</h4>
                       <p class="property-address">
                         <i class="bi bi-geo-alt"></i>
-                        3458 Sunset Boulevard, Beverly Hills, CA 90210
+                        3458 Sunset Boulevard, New Haven, CN 90210
                       </p>
                       <div class="property-specs">
                         <div class="spec-item">
@@ -271,7 +265,7 @@
                     </a>
                     <div class="property-agent-info"><a href="property-details.html" class="property-link">
                         <div class="agent-avatar">
-                          <img src="assets/img/real-estate/agent-2.webp" alt="Agent">
+                          <img src="{% static 'assets/img/real-estate/agent-2.webp' %}" alt="Agent">
                         </div>
                         <div class="agent-details">
                           <strong>Jennifer Miller</strong>
@@ -293,7 +287,7 @@
                 <div class="property-item">
                   <a href="property-details.html" class="property-link">
                     <div class="property-image-wrapper">
-                      <img src="assets/img/real-estate/property-interior-1.webp" alt="Modern Apartment" class="img-fluid">
+                      <img src="{% static 'assets/img/real-estate/property-interior-1.webp' %}" alt="Modern Apartment" class="img-fluid">
                       <div class="property-status">
                         <span class="status-badge new">New Listing</span>
                         <span class="status-badge rent">For Rent</span>
@@ -320,7 +314,7 @@
                       <h4 class="property-title">Downtown Modern Penthouse</h4>
                       <p class="property-address">
                         <i class="bi bi-geo-alt"></i>
-                        1247 Broadway Street, Manhattan, NY 10001
+                        1247 Broadway Street, New Haven, CN 10001
                       </p>
                       <div class="property-specs">
                         <div class="spec-item">
@@ -339,7 +333,7 @@
                     </a>
                     <div class="property-agent-info"><a href="property-details.html" class="property-link">
                         <div class="agent-avatar">
-                          <img src="assets/img/real-estate/agent-4.webp" alt="Agent">
+                          <img src="{% static 'assets/img/real-estate/yaleprop2.jpg' %}" alt="Agent">
                         </div>
                         <div class="agent-details">
                           <strong>Robert Thompson</strong>
@@ -361,9 +355,9 @@
                 <div class="property-item">
                   <a href="property-details.html" class="property-link">
                     <div class="property-image-wrapper">
-                      <img src="assets/img/real-estate/property-exterior-5.webp" alt="Family Home" class="img-fluid">
+                      <img src="{% static 'assets/img/real-estate/property-exterior-5.webp' %}" alt="Family Home" class="img-fluid">
                       <div class="property-status">
-                        <span class="status-badge sale">For Sale</span>
+                        <span class="status-badge sale">For Rent</span>
                       </div>
                       <div class="property-actions">
                         <button class="action-btn favorite-btn" data-toggle="tooltip" title="Add to Favorites">
@@ -381,13 +375,13 @@
                   </a>
                   <div class="property-details"><a href="property-details.html" class="property-link">
                       <div class="property-header">
-                        <div class="property-price">$975,000</div>
+                        <div class="property-price">$9750 per month</div>
                         <div class="property-type">House</div>
                       </div>
                       <h4 class="property-title">Charming Family Home with Garden</h4>
                       <p class="property-address">
                         <i class="bi bi-geo-alt"></i>
-                        892 Maple Grove Avenue, Austin, TX 73301
+                        892 Maple Grove Avenue, New Haven, CN 73301
                       </p>
                       <div class="property-specs">
                         <div class="spec-item">
@@ -406,11 +400,11 @@
                     </a>
                     <div class="property-agent-info"><a href="property-details.html" class="property-link">
                         <div class="agent-avatar">
-                          <img src="assets/img/real-estate/agent-6.webp" alt="Agent">
+                          <img src="{% static 'assets/img/real-estate/agent-6.webp' %}" alt="Agent">
                         </div>
                         <div class="agent-details">
                           <strong>Lisa Anderson</strong>
-                          <span>Texas Home Solutions</span>
+                          <span>New Haven Home Solutions</span>
                         </div>
                       </a>
                       <div class="agent-contact"><a href="property-details.html" class="property-link">
@@ -428,7 +422,7 @@
                 <div class="property-item">
                   <a href="property-details.html" class="property-link">
                     <div class="property-image-wrapper">
-                      <img src="assets/img/real-estate/property-interior-6.webp" alt="Studio Loft" class="img-fluid">
+                      <img src="{% static 'assets/img/real-estate/property-interior-6.webp' %}" alt="Studio Loft" class="img-fluid">
                       <div class="property-status">
                         <span class="status-badge open">Open House</span>
                         <span class="status-badge rent">For Rent</span>
@@ -455,7 +449,7 @@
                       <h4 class="property-title">Industrial Style Studio Loft</h4>
                       <p class="property-address">
                         <i class="bi bi-geo-alt"></i>
-                        567 Warehouse District, Brooklyn, NY 11201
+                        567 Warehouse District, New Haven , CN 11201
                       </p>
                       <div class="property-specs">
                         <div class="spec-item">
@@ -474,11 +468,11 @@
                     </a>
                     <div class="property-agent-info"><a href="property-details.html" class="property-link">
                         <div class="agent-avatar">
-                          <img src="assets/img/real-estate/agent-8.webp" alt="Agent">
+                          <img src="{% static 'assets/img/real-estate/agent-8.webp' %}" alt="Agent">
                         </div>
                         <div class="agent-details">
                           <strong>Marcus Johnson</strong>
-                          <span>Brooklyn Properties</span>
+                          <span>New Haven Properties</span>
                         </div>
                       </a>
                       <div class="agent-contact"><a href="property-details.html" class="property-link">
@@ -496,9 +490,9 @@
                 <div class="property-item">
                   <a href="property-details.html" class="property-link">
                     <div class="property-image-wrapper">
-                      <img src="assets/img/real-estate/property-exterior-7.webp" alt="Townhouse" class="img-fluid">
+                      <img src="{% static 'assets/img/real-estate/property-exterior-7.webp' %}" alt="Townhouse" class="img-fluid">
                       <div class="property-status">
-                        <span class="status-badge sale">For Sale</span>
+                        <span class="status-badge sale">For Rent</span>
                       </div>
                       <div class="property-actions">
                         <button class="action-btn favorite-btn" data-toggle="tooltip" title="Add to Favorites">
@@ -516,13 +510,13 @@
                   </a>
                   <div class="property-details"><a href="property-details.html" class="property-link">
                       <div class="property-header">
-                        <div class="property-price">$725,000</div>
+                        <div class="property-price">$7250 per month</div>
                         <div class="property-type">Townhouse</div>
                       </div>
                       <h4 class="property-title">Contemporary Waterfront Townhouse</h4>
                       <p class="property-address">
                         <i class="bi bi-geo-alt"></i>
-                        234 Harbor Drive, Miami, FL 33101
+                        234 Harbor Drive, New Haven, CN 33101
                       </p>
                       <div class="property-specs">
                         <div class="spec-item">
@@ -541,11 +535,11 @@
                     </a>
                     <div class="property-agent-info"><a href="property-details.html" class="property-link">
                         <div class="agent-avatar">
-                          <img src="assets/img/real-estate/agent-9.webp" alt="Agent">
+                          <img src="{% static 'assets/img/real-estate/agent-9.webp' %}" alt="Agent">
                         </div>
                         <div class="agent-details">
                           <strong>Sofia Martinez</strong>
-                          <span>Coastal Realty</span>
+                          <span>New Haven Realty</span>
                         </div>
                       </a>
                       <div class="agent-contact"><a href="property-details.html" class="property-link">
@@ -563,10 +557,10 @@
                 <div class="property-item">
                   <a href="property-details.html" class="property-link">
                     <div class="property-image-wrapper">
-                      <img src="assets/img/real-estate/property-interior-8.webp" alt="Condo" class="img-fluid">
+                      <img src="{% static 'assets/img/real-estate/property-interior-8.webp' %}" alt="Condo" class="img-fluid">
                       <div class="property-status">
                         <span class="status-badge reduced">Price Reduced</span>
-                        <span class="status-badge sale">For Sale</span>
+                        <span class="status-badge sale">For Rent</span>
                       </div>
                       <div class="property-actions">
                         <button class="action-btn favorite-btn" data-toggle="tooltip" title="Add to Favorites">
@@ -584,13 +578,13 @@
                   </a>
                   <div class="property-details"><a href="property-details.html" class="property-link">
                       <div class="property-header">
-                        <div class="property-price">$645,000 <span class="old-price">$695,000</span></div>
+                        <div class="property-price">$6450 per month <span class="old-price">$6950</span></div>
                         <div class="property-type">Condo</div>
                       </div>
                       <h4 class="property-title">High-Rise Condo with City Views</h4>
                       <p class="property-address">
                         <i class="bi bi-geo-alt"></i>
-                        789 Skyline Tower, Seattle, WA 98101
+                        789 Skyline Tower, Connecticut , CN 98101
                       </p>
                       <div class="property-specs">
                         <div class="spec-item">
@@ -609,11 +603,11 @@
                     </a>
                     <div class="property-agent-info"><a href="property-details.html" class="property-link">
                         <div class="agent-avatar">
-                          <img src="assets/img/real-estate/agent-10.webp" alt="Agent">
+                          <img src="{% static 'assets/img/real-estate/agent-10.webp' %}" alt="Agent">
                         </div>
                         <div class="agent-details">
                           <strong>James Wilson</strong>
-                          <span>Pacific Northwest Realty</span>
+                          <span>Northwest Realty</span>
                         </div>
                       </a>
                       <div class="agent-contact"><a href="property-details.html" class="property-link">
@@ -639,7 +633,7 @@
                     <div class="row align-items-center">
                       <div class="col-lg-4">
                         <div class="property-image-wrapper">
-                          <img src="assets/img/real-estate/property-exterior-2.webp" alt="Luxury Villa" class="img-fluid">
+                          <img src="{% static 'assets/img/real-estate/property-exterior-2.webp' %}" alt="Luxury Villa" class="img-fluid">
                           <div class="property-status">
                             <span class="status-badge featured">Featured</span>
                           </div>
@@ -654,12 +648,12 @@
                                   <h4 class="property-title">Luxury Modern Villa with Pool</h4>
                                   <div class="property-type-price">
                                     <span class="property-type">House</span>
-                                    <span class="property-price">$1,850,000</span>
+                                    <span class="property-price">$10,800 per month</span>
                                   </div>
                                 </div>
                                 <p class="property-address">
                                   <i class="bi bi-geo-alt"></i>
-                                  3458 Sunset Boulevard, Beverly Hills, CA 90210
+                                  3458 Sunset Boulevard, New Haven, CN 90210
                                 </p>
                                 <div class="property-specs">
                                   <span><i class="bi bi-house-door"></i> 5 Bed</span>
@@ -668,7 +662,7 @@
                                 </div>
                                 <div class="property-agent">
                                   <img src="assets/img/real-estate/agent-2.webp" alt="Agent" class="agent-avatar">
-                                  <span>Jennifer Miller, Prime Realty Group</span>
+                                  <span>Jennifer Miller, Prime New Haven Realty Group</span>
                                 </div>
                               </div>
                             </div>
@@ -702,7 +696,7 @@
                     <div class="row align-items-center">
                       <div class="col-lg-4">
                         <div class="property-image-wrapper">
-                          <img src="assets/img/real-estate/property-interior-1.webp" alt="Modern Apartment" class="img-fluid">
+                          <img src="{% static 'assets/img/real-estate/property-interior-1.webp' %}" alt="Modern Apartment" class="img-fluid">
                           <div class="property-status">
                             <span class="status-badge new">New</span>
                           </div>
@@ -714,7 +708,7 @@
                             <div class="col-lg-8">
                               <div class="property-info">
                                 <div class="property-header">
-                                  <h4 class="property-title">Downtown Modern Penthouse</h4>
+                                  <h4 class="property-title">Modern Penthouse</h4>
                                   <div class="property-type-price">
                                     <span class="property-type">Apartment</span>
                                     <span class="property-price">$5,200<small>/month</small></span>
@@ -722,7 +716,7 @@
                                 </div>
                                 <p class="property-address">
                                   <i class="bi bi-geo-alt"></i>
-                                  1247 Broadway Street, Manhattan, NY 10001
+                                  1247 Broadway Street, New Haven, CN 10001
                                 </p>
                                 <div class="property-specs">
                                   <span><i class="bi bi-house-door"></i> 3 Bed</span>
@@ -730,7 +724,7 @@
                                   <span><i class="bi bi-arrows-angle-expand"></i> 2,100 sq ft</span>
                                 </div>
                                 <div class="property-agent">
-                                  <img src="assets/img/real-estate/agent-4.webp" alt="Agent" class="agent-avatar">
+                                  <img src="{% static 'assets/img/real-estate/agent-4.webp' %}" alt="Agent" class="agent-avatar">
                                   <span>Robert Thompson, Urban Living Realty</span>
                                 </div>
                               </div>
@@ -765,9 +759,9 @@
                     <div class="row align-items-center">
                       <div class="col-lg-4">
                         <div class="property-image-wrapper">
-                          <img src="assets/img/real-estate/property-exterior-5.webp" alt="Family Home" class="img-fluid">
+                          <img src="{% static 'assets/img/real-estate/property-exterior-5.webp' %}" alt="Family Home" class="img-fluid">
                           <div class="property-status">
-                            <span class="status-badge sale">For Sale</span>
+                            <span class="status-badge sale">For Rent</span>
                           </div>
                         </div>
                       </div>
@@ -777,15 +771,15 @@
                             <div class="col-lg-8">
                               <div class="property-info">
                                 <div class="property-header">
-                                  <h4 class="property-title">Charming Family Home with Garden</h4>
+                                  <h4 class="property-title">Charming Home with Garden</h4>
                                   <div class="property-type-price">
                                     <span class="property-type">House</span>
-                                    <span class="property-price">$975,000</span>
+                                    <span class="property-price">$9750 per month</span>
                                   </div>
                                 </div>
                                 <p class="property-address">
                                   <i class="bi bi-geo-alt"></i>
-                                  892 Maple Grove Avenue, Austin, TX 73301
+                                  892 Maple Grove Avenue, New Haven, CN 73301
                                 </p>
                                 <div class="property-specs">
                                   <span><i class="bi bi-house-door"></i> 4 Bed</span>
@@ -793,8 +787,8 @@
                                   <span><i class="bi bi-arrows-angle-expand"></i> 2,650 sq ft</span>
                                 </div>
                                 <div class="property-agent">
-                                  <img src="assets/img/real-estate/agent-6.webp" alt="Agent" class="agent-avatar">
-                                  <span>Lisa Anderson, Texas Home Solutions</span>
+                                  <img src="{% static 'assets/img/real-estate/agent-6.webp' %}" alt="Agent" class="agent-avatar">
+                                  <span>Lisa Anderson, Connecticut Home Solutions</span>
                                 </div>
                               </div>
                             </div>
@@ -868,9 +862,9 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">HomeSpace</span>
+            <span class="sitename">Yale University</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Discover a vibrant community where tradition meets innovation. Yale offers world-class academics, inspiring faculty, and historic yet modern campus facilities—all designed to support your growth and curiosity</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -890,37 +884,34 @@
           </ul>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
+{#        <div class="col-lg-2 col-6 footer-links">#}
+{#          <h4>Our Services</h4>#}
+{#          <ul>#}
+{#            <li><a href="#">Web Design</a></li>#}
+{#            <li><a href="#">Web Development</a></li>#}
+{#            <li><a href="#">Product Management</a></li>#}
+{#            <li><a href="#">Marketing</a></li>#}
+{#            <li><a href="#">Graphic Design</a></li>#}
+{#          </ul>#}
+{#        </div>#}
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
+          <p>New Haven, Connecticut</p>
+          <p>Connecticut, CN 535022</p>
           <p>United States</p>
           <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p><strong>Email:</strong> <span>yaleuniversity@outlook.com</span></p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">HomeSpace</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Yale University</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+        Designed by <a href="https://github.com/hodhanhassan99">Hodhan Hassan</a>
       </div>
     </div>
 
@@ -933,14 +924,14 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 
