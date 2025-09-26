@@ -34,9 +34,8 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-         <img src="{% static 'assets/img/welcyale.jpg' %}" alt="">
+      <a href="{% url 'my_home' %}" class="logo d-flex align-items-center">
+      <img src="{% static 'assets/img/welcyale.jpg' %}" alt="">
 {#       <svg> {# class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">#}
 {#          <g id="bgCarrier" stroke-width="0"></g>#}
 {#          <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>#}
@@ -50,8 +49,9 @@
 {#            <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z" stroke="currentColor" stroke-width="1.5"></path>#}
 {#          </g>#}
 {#        </svg>#}
-        <h1 class="sitename">Yale University</h1>
-      </a>
+          <h1 class="sitename">Yale University</h1>
+          </a>
+
 
       <nav id="navmenu" class="navmenu">
         <ul>
